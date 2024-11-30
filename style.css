@@ -581,6 +581,6 @@ header {
     }
     .footer .alone {
         grid-template-columns: 1fr;
-        gap: 50px;
+        gap: 40px;
     }
 }
