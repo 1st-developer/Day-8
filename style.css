@@ -6,15 +6,12 @@
 }
 
 body {
+    width: 100%;
     background: #dddd;
 }
 
 html {
     scroll-behavior: smooth;
-}
-
-.body {
-    background: #dddd;
 }
 
 header {
@@ -31,6 +28,7 @@ header {
 .logo {
     color: #fff;
     font-size: 2rem;
+    user-select: none;
 }
 
 .links {
@@ -426,6 +424,118 @@ header {
     color: #fff;
 }
 
+.three {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.three .more {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.three .more img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.more:hover .home {
+    transform: translateY(0);
+}
+
+.home {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, #000 50%, transparent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(13rem);
+    transition: transform .5s ease;
+    transition-duration: .8s;
+}
+
+.drop-up {
+    color: #fff;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    gap: 20px;
+    text-align: center;
+}
+
+.drop-up h2 {
+    font-size: 3rem;
+}
+
+.drop-up p {
+    font-size: 1rem;
+    color: #b1b1b1;
+}
+
+.drop-up a {
+    color: #fff;
+    text-decoration: none;
+    padding: 20px 50px;
+    background: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.footer {
+    width: 100%;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+}
+
+.footer .alone {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 100px;
+    justify-content: center;
+    margin: 100px 20px;
+}
+
+.linkses {
+    display: grid;
+    flex-direction: column;
+    gap: 20px;
+    color: #fff;
+}
+
+.linkses h2 {
+    font-size: 3rem;
+}
+
+.linkses a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.linkses a:hover {
+    text-decoration: underline;
+}
+
 @media (max-width: 1000px) {
     .second .six-box {
         grid-template-columns: repeat(2, 1fr);
@@ -438,6 +548,15 @@ header {
     }
     header {
         padding: 20px 50px;
+    }
+    .three {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .linkses h2 {
+        font-size: 2rem;
+    }
+    .footer .alone {
+        gap: 20px;
     }
 }
 
@@ -456,5 +575,12 @@ header {
     }
     .links {
         gap: 1px;
+    }
+    .three {
+        grid-template-columns: 1fr;
+    }
+    .footer .alone {
+        grid-template-columns: 1fr;
+        gap: 50px;
     }
 }
